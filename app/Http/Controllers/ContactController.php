@@ -35,12 +35,12 @@ class ContactController extends Controller
     }
 
     // method to delete a selected contact
-    public function delete(Contact $id) {
+    public function delete($id) {
         
-        $id=$contact['id'];
-        Contact::where('id', $id)->delete();
-        return redirect()->back();
-        
+        Contact::find($id)->delete();
+
+        return view('index');
+
         /* Alternate Approach:
 
         $sql = 'DELETE FROM App\Contact WHERE id = :id';

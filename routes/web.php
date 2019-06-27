@@ -21,7 +21,7 @@ Route::post('/create', [
     'as'=>'contacts.create'
 ]);
 
-Route::get('/delete', [
+Route::delete('/delete', [
     'uses'=>'ContactController@delete',
     'as'=>'contacts.delete'
 ]);

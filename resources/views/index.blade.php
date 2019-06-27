@@ -64,8 +64,17 @@
                             <td> {{$contact->l_name}} </td>
                             <td> {{$contact->address}} </td>
                             <td>
-                                <form class="btn btn-danger delete_contact"  action="{{ route('contacts.delete') }}"
-                                onclick="return confirm('Are you sure you want to delete this contact?')">Delete</form>
+                                <form method="POST" action="/delete/{{ $contact->id }}">
+                                    @method('DELETE')
+                                    @csrf
+
+                                    <div class="field">
+                                        <div class="control">
+                                            <button type="submit" class="button">Delete Contact</button>
+                                        </div>
+                                    </div>
+
+                                </form>
                             </td>
                         </tr>
                     @endforeach
