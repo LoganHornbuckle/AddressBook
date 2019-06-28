@@ -39,6 +39,8 @@ class ContactController extends Controller
 
         echo "Delete Data";
 
+        return view('index');
+
         /* Alternate Approach:
 
         $sql = 'DELETE FROM App\Contact WHERE id = :id';

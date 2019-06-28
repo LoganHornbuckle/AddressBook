@@ -84,16 +84,3 @@
     </div>
 </body>
 </html>
-
-
-<!--
-ALTERNATE ATTEMPT TO DELETE:
-
- <form method="POST" action="{{route('contacts.delete')}}">
-    <div class="field">
-        <div class="control">
-            <button type="submit" class="button">Delete Contact</button>
-        </div>
-    </div>
-                                </form>
--->
