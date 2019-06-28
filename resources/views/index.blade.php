@@ -67,6 +67,7 @@
                             <td>
                             <form method="post" action="{{ route('contacts.delete') }}" >
                                 <input name="_method" type="hidden" value="post">
+                                <input name="id" type="hidden" value="{{$contact->id}}">
                                 {{ csrf_field() }}
                                 <button type="hidden" class="btn btn-danger">DELETE</button>
                             </form>
