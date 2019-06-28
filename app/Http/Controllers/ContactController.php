@@ -35,22 +35,14 @@ class ContactController extends Controller
     }
 
     // method to delete a selected contact
-    public function destroy($id) {
+    public function delete(Request $request) {
+        
+        $id = $request['id'];
 
-        echo "Delete Data";
-
-        return view('index');
-
-        /* Alternate Approach:
-
-        $sql = 'DELETE FROM App\Contact WHERE id = :id';
-
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindValue(':id', $id);
-        $stmt->excecute();
-
-        return view('index');
-        */
+        Contact::where('id', true)->delete();
+        //Contact::all('id', $id)->delete();
+        
+        return redirect()->back();
     }
     
 }

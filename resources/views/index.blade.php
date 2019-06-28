@@ -63,13 +63,13 @@
                             <td> {{$contact->f_name}} </td>
                             <td> {{$contact->l_name}} </td>
                             <td> {{$contact->address}} </td>
+                            <td> {{$contact->id}} </td>
                             <td>
-                                <form action="{{ route('contacts.destroy', [$contact->id])}}" method="POST" >
-                                    @method('DELETE')
-                                    @csrf
-                                    
-                                    <button type="submit" class="button">Delete Contact</button>
-                                </form>
+                            <form method="post" action="{{ route('contacts.delete') }}" >
+                                <input name="_method" type="hidden" value="post">
+                                {{ csrf_field() }}
+                                <button type="submit" class="btn btn-danger">DELETE</button>
+                            </form>
                             </td>
                         </tr>
                     @endforeach

@@ -11,6 +11,8 @@
 |
 */
 
+use Psr\Http\Message\ServerRequestInterface;
+
 Route::get('/', [
     'uses'=>'ContactController@show',
     'as'=>'contacts.show'
@@ -20,10 +22,8 @@ Route::post('/create', [
     'uses'=>'ContactController@create',
     'as'=>'contacts.create'
 ]);
-/*
-Route::delete('/delete', [
-    'uses'=>'ContactController@destroy',
-    'as'=>'contacts.destroy'
+
+Route::post('delete', [
+    'uses'=>'ContactController@delete',
+    'as'=>'contacts.delete'
 ]);
-*/
-Route::resource('contacts', 'ContactController');
