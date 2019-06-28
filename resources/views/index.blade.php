@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <form action="{{route('contacts.create')}}" method="post">
                     @csrf
                     <div class="row form-group">
@@ -63,7 +63,7 @@
                     </div>
                 </form>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <table class="table table-striped table-hover">
                     <tr>
                         <th>First Name</th>
