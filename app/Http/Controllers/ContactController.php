@@ -15,12 +15,16 @@ class ContactController extends Controller
         $f_name = $request['f_name'];
         $l_name = $request['l_name'];
         $address = $request['address'];
+        $email = $request['email'];
+        $phone = $request['phone'];
 
         $contact = new Contact();
 
         $contact->f_name=$f_name;
         $contact->l_name=$l_name;
         $contact->address=$address;
+        $contact->email=$email;
+        $contact->phone=$phone;
 
         $contact->save();
 

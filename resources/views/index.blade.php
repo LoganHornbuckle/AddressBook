@@ -46,6 +46,18 @@
                     </div>
                     <div class="row form-group">
                         <div class="col-md-12">
+                            <label for="">Phone: </label>
+                            <input type="text" name="email" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <label for="">Email: </label>
+                            <input type="text" name="phone" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12">
                             <button type="submit" class="btn btn-success w-50 float-right">Create</button>
                         </div>
                     </div>
@@ -57,13 +69,16 @@
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Address</th>
+                        <th>Email</th>
+                        <th>Phone</th>
                     </tr>
                     @foreach($contacts as $contact)
                         <tr>
                             <td> {{$contact->f_name}} </td>
                             <td> {{$contact->l_name}} </td>
                             <td> {{$contact->address}} </td>
-                            <td> {{$contact->id}} </td>
+                            <td> {{$contact->email}} </td>
+                            <td> {{$contact->phone}} </td>
                             <td>
                             <form method="post" action="{{ route('contacts.delete') }}" >
                                 <input name="_method" type="hidden" value="post">
