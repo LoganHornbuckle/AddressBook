@@ -64,16 +64,11 @@
                             <td> {{$contact->l_name}} </td>
                             <td> {{$contact->address}} </td>
                             <td>
-                                <form method="POST" action="/delete/{{ $contact->id }}">
+                                <form action="{{ route('contacts.destroy', [$contact->id])}}" method="POST" >
                                     @method('DELETE')
                                     @csrf
-
-                                    <div class="field">
-                                        <div class="control">
-                                            <button type="submit" class="button">Delete Contact</button>
-                                        </div>
-                                    </div>
-
+                                    
+                                    <button type="submit" class="button">Delete Contact</button>
                                 </form>
                             </td>
                         </tr>

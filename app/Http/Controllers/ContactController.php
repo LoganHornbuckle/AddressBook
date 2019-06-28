@@ -35,11 +35,9 @@ class ContactController extends Controller
     }
 
     // method to delete a selected contact
-    public function delete($id) {
-        
-        Contact::find($id)->delete();
+    public function destroy($id) {
 
-        return view('index');
+        echo "Delete Data";
 
         /* Alternate Approach:
 

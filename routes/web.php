@@ -20,8 +20,10 @@ Route::post('/create', [
     'uses'=>'ContactController@create',
     'as'=>'contacts.create'
 ]);
-
+/*
 Route::delete('/delete', [
-    'uses'=>'ContactController@delete',
-    'as'=>'contacts.delete'
+    'uses'=>'ContactController@destroy',
+    'as'=>'contacts.destroy'
 ]);
+*/
+Route::resource('contacts', 'ContactController');
